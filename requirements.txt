@@ -1,0 +1,11 @@
+rerun-sdk
+torch-scatter
+timm
+einops
+open_clip_torch
+transformers
+scipy
+scikit-learn
+hydra-core
+nanobind
+tqdm
