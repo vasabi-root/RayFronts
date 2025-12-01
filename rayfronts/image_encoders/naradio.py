@@ -155,7 +155,8 @@ class GaussKernelAttn(nn.Module):
     return attn_output
 
   def update_input_resolution(self, input_resolution):
-    h, w = input_resolution
+    self.input_resolution = input_resolution
+    h, w = self.input_resolution
     n_patches = (w // 16, h //16)
     window_size = [side * 2 - 1 for side in n_patches]
     window = GaussKernelAttn.gaussian_window(*window_size, std=self.gauss_std,
